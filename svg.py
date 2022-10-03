@@ -77,9 +77,9 @@ colors = [
 
 
 for color in colors:
-    d = draw.Drawing(200, 100, origin='center', displayInline=False)
+    d = draw.Drawing(height=100, width=100, origin=(0,-100), displayInline=False)
     # Draw a circle
-    d.append(draw.Circle(-40, -10, 30,
+    d.append(draw.Circle('50%', '50%', 50,
                 fill=color['hex_code']))
     hex_code = color['hex_code'].split('#')[1]
     image_name = f"{color['name']}_{hex_code}.svg"
